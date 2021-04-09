@@ -1,0 +1,9 @@
+.my-hero {
+    height: 500px;
+    background-image: url(/img/hero-tacos.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
