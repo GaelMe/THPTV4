@@ -1,0 +1,173 @@
+$blancCasse : #f1f1f1;
+$blancGris : #f5f5f5;
+$sombre: #333;
+
+@mixin flexCentreX {
+    display: flex;
+    justify-content: center;  
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+    height: 100vh;
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    background-color: $blancGris;
+    @include flexCentreX;
+    border-bottom: 1px solid black;
+    // Pour quelle reste au dessus de tout et fixe
+    position: fixed;
+    z-index: 100;
+}
+
+.contItems{ {
+    font-size: 22px;
+    height: 100%;
+    // Container centré sur X
+    display: flex;
+    // Objet centrer sur Y
+    align-items: center;
+
+    .items{
+        margin-right: 30px;
+        text-decoration: none;
+        color: black;
+
+        &:hover{
+            color: #5f5f5f;
+        }
+    }
+}
+}
+
+
+// Accueil
+
+.accueil{
+    height: 800px;
+    width: 100%;
+    // Rappel : Si bug d'image alors sombre 
+    background-color: $sombre;
+    background-image: '../ressources//home.jpg';
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+
+    h1{
+        font-family: 'Abril Fatface', sans-serif;
+        $color : $blancCasse;
+        font-size: 70px;
+        letter-spacing: 5px;
+        margin: 0;
+        position: relative;
+        padding-top: 150px;
+
+        &::first-letter{
+            font-size: 120px;
+        }
+    }
+    .sousTitreP{
+        color: $blancCasse;
+        font-family: 'Poppins', 'sans-serif';
+        font-size: 22px;
+    }
+}
+
+@media  and {max-width: 1000px){
+    .accueil h1{
+        font-size: 50px;
+    }
+}
+
+
+@media screen and (max-width: 760px){
+    .accueil{
+        height: 600px;
+
+        h1{
+            font-size: 30px;
+        }
+        .sousTitreP{
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px){
+    .accueil{
+        height: 500px;
+        align-items: flex-start;
+
+        h1{
+            margin: 0p 20px;
+
+            &::first-letter{
+                font-size: 50px;
+            }
+        }
+        .sousTitreP{
+            margin: 0p 20px;
+        }
+    }
+}
+
+
+// Section 1 texte et image
+
+.titreSec1{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.txtImg{
+    padding-top: 20px;
+    width: 100px;
+    @include flexCentreX;
+    border-bottom: 1px dashed lightblue;
+}
+
+.flexContainerSection1{
+    @include flexCentreX{
+         width: 1200px;
+
+         .contImgSection1
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
