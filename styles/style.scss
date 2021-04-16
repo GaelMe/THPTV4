@@ -141,30 +141,198 @@ body{
     @include flexCentreX{
          width: 1200px;
 
-         .contImgSection1
+         .contImgSection1{
+             width: 45%;
+             margin: 20px;
+
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+         }
+
+         .contTxtSection1{
+             width: 45%;
+             background-color: azure;
+             margin:20px;
+             border-radius: 2px;
+
+             h2{
+                 text-align: center;
+                 font-size: 35px;
+             }
+
+             .sousTitreSection1{
+                 text-align: center;
+
+             }
+
+             hr{
+                 width:60px;
+             }
+
+             .txtSection1{
+                 font-size: 19px;
+                padding: 15px;                 
+                
+                &::first-letter{
+                    font-size: 30px;
+                }
+            
+            }
+
+         }
     }
 
+}
+
+@media screen and (max-width: 1200px){
+    .txtImg .flexContainerSection1{
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+
+        .contImgSection1{
+            width: 100%;
+        }
+
+        .contTxtSection1{
+            width: 100px;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .titreSec1{
+        font-size: 25px;
+    }
+}
 
 
+// Section Création Projet TV4
+
+// METTRE UN OVERLAY POUR VOIR A QUI ET QUOI EST LE PROJET
+
+    .titrePortfolio{
+        font-size: 40px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    @media screen and(max-width: 550px) {
+        .titrePortfolio{
+            font-size: 25px;
+        }        
+    }
+
+    .diviseurPortfolio{
+        width: 20%;
+    }
+
+    .portFolioImg{
+        padding-top: 20px;
+        width: 100%;
+        @include flexCentreX;
+        padding-bottom: 100px;
+    
+
+    .flexImgPortfolio{
+       width: 1200px;
+       @include flexCentreX;
+    //    RAison pour laquelle les images en dessous 
+       flex-wrap: wrap; 
+
+    .imgPortfolio
+        width: 300px;
+        margin:20px;
+        height: 370px;
+        // cacher ce qui dépasse
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Section de Parallax
+
+.paraScroll{
+    width: 100%;
+    height: 300px;
+    background: url(../ressources/para.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include flexCentreX
+
+    h3{
+        text-align:center;
+        color:$blancCasse;
+        font-size: 50px;
+        letter-spacing: 5px;
+
+    }
+
+}
 
 
+// Formulaire de contact
 
 
+.titreForm{
+    text-align: center;
+}
+
+.formulaire{
+    width: 100%;
+    @include flexCentreX;
+
+    form{
+        width: 60%;
+
+        .row{
+            width: 100%;
+
+            input,textarea{
+                width: 100%;
+                padding: 12px;
+                border:1px solid #ccc
+                border-radius: 4px;
+            }
+
+            textarea{
+                height: 150px;
+            }
+
+            .subButton{
+                width: 30%;
+                margin: 0 auto;
+                display: block;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: all 0,2 ease;
+
+                &:hover{
+                    background: midnightblue;
+                    color: $blancCasse;
+                }
+            }
+        }
+ 
+        .row:nth-child(2), .row:nth-child(3){
+            margin-top: 30px;
+              
+        } 
+    }    
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer{
+    @include flexCentreX;
+    border-top: 1px dashed $sombre;
+}
 
 
 
